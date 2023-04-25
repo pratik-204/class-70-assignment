@@ -68,13 +68,14 @@ export default class RideScreen extends Component {
         <View style={styles.lowerContainer}>
           <View style={styles.textinputContainer}>
             <TextInput
-              style={[styles.textinput, { width: "82%" }]}
+              style={[styles.textinput, { width: "55%" }]}
               placeholder={"User Id"}
               placeholderTextColor={"#FFFFFF"}
               value={userId}
             />
             <TouchableOpacity style={styles.scanbutton}
-            onPress={this.getCameraPermissions()}>
+            onPress={this.getCameraPermissions()}
+            >
                 <Text style={styles.scanbuttonText}>Scan</Text>
             </TouchableOpacity>
           </View>
@@ -90,10 +91,10 @@ export default class RideScreen extends Component {
             <TouchableOpacity
               style={styles.scanbutton}
 
-            onPress={this.getCameraPermissions()}
-            // onPress={() => this.getCameraPermissions()}
-             // onPress={() => this.getCameraPermissions}
-             // onPress=() => this.getCameraPermissions()
+            //onPress={this.getCameraPermissions()}
+            onPress={() => this.getCameraPermissions()}
+            // onPress={() => this.getCameraPermissions}
+            // onPress=() => this.getCameraPermissions()
 
              
 
@@ -132,6 +133,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontFamily: "Rajdhani_600SemiBold",
     paddingTop: 20,
+    
     color: "#4C5D70"
   },
   subtitle: {
@@ -141,14 +143,16 @@ const styles = StyleSheet.create({
   },
   lowerContainer: {
     flex: 0.5,
-    alignItems: "center"
+    alignItems: "center",
+    paddingTop:50
   },
   textinputContainer: {
     borderWidth: 2,
     borderRadius: 10,
     flexDirection: "row",
     backgroundColor: "#4C5D70",
-    borderColor: "#4C5D70"
+    borderColor: "#4C5D70",
+    
   },
   textinput: {
     width: "57%",

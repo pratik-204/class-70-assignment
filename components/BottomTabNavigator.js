@@ -18,16 +18,16 @@ export default class BottomTabNavigator extends Component {
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
 
-              // if (route === "Ride") {
-              //   iconName = "bicycle";
-              // } else if (route === "Ride History") {
-              //   iconName = "time";
-              // }
+               if (route === "Ride") {
+                 iconName = "bicycle";
+               } else if (route === "Ride History") {
+                 iconName = "time";
+               }
             
               // if (route.name = "Ride") {
-              //   iconName = "bicycle";
+              //  iconName = "bicycle";
               // } else if (route.name = "Ride History") {
-              //   iconName = "time";
+              //  iconName = "time";
               // }
 
               // if (route.name === Ride) {
@@ -39,7 +39,7 @@ export default class BottomTabNavigator extends Component {
               // if (route.name === "Ride") {
               //   iconName = "bicycle";
               // } else if (route.name === "Ride History") {
-              //   iconName = "time";
+              //  iconName = "time";
               // }
 
               return (
@@ -47,7 +47,6 @@ export default class BottomTabNavigator extends Component {
                   name={iconName}
                   size={size}
                   color={color}
-                  size={size}
                 />
               );
             }
